@@ -16,7 +16,7 @@ jobs:
     - name: Build and push Image to Dockerhub
       uses: docker/build-push-action@v1.1.0
       with: 
-        username: ${{ secrets.DOCKER_USERNAME }}
+        username: ${{ hefi1413 }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: hefi1413/gitopsfc
         tags: ${{ github.sha }}, latest
