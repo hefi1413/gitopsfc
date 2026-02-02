@@ -37,7 +37,7 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
-        cd K8s
+        cd k8s
         kustomize edit set image javaserver=$DOCKER_USERNAME/gitopsfc:$GITHUB_SHA
 
     - name: Commit
