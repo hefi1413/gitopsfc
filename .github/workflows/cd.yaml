@@ -29,7 +29,7 @@ jobs:
         tags: ${{ github.sha }},latest
       
     - name: Setup kustomize
-      uses: iranismail/setup-kustomize@v1
+      uses: imranismail/setup-kustomize@v1
       with:
         kustomize-version: "3.6.1"
 
