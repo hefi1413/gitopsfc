@@ -4,6 +4,6 @@ resources:
 - deployment.yaml
 - service.yaml
 images:
-- digest: gmail.com/gitopsfc:e4f4a08647fb8c2f4997d006225e3b2175c6f4fa
-  name: javaserver
-  newName: hefi1413
+- name: javaserver
+  newName: /gitopsfc
+  newTag: ffe9491a0c1c17725e27023cff7901a4eecde80a
