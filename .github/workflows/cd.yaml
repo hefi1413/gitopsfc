@@ -35,7 +35,7 @@ jobs:
 
     - name: Update Kubernetes resources
       env:
-        DOCKER_USERNAME: ${{ vars.DOCKER_USERNAME }}
+        REPOSITORY: ${{ vars.REPOSITORY }}
       run: |
         cd k8s
         kustomize edit set image javaserver=$REPOSITORY/gitopsfc:$GITHUB_SHA
