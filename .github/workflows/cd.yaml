@@ -25,7 +25,7 @@ jobs:
       with: 
         username: ${{ vars.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: REPOSITORY/gitopsfc
+        repository: ${{ vars.REPOSITORY }}/gitopsfc
         tags: ${{ github.sha }},latest
       
     - name: Setup kustomize
@@ -38,7 +38,7 @@ jobs:
         DOCKER_USERNAME: ${{ vars.DOCKER_USERNAME }}
       run: |
         cd k8s
-        kustomize edit set image javaserver=REPOSITORY/gitopsfc:$GITHUB_SHA
+        kustomize edit set image javaserver=$REPOSITORY/gitopsfc:$GITHUB_SHA
 
     - name: Commit
       run: |
@@ -50,4 +50,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        repository: REPOSITORY/gitopsfc
+        repository: ${{ vars.REPOSITORY }}/gitopsfc
