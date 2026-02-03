@@ -5,5 +5,5 @@ resources:
 - service.yaml
 images:
 - name: javaserver
-  newName: /gitopsfc
-  newTag: ffe9491a0c1c17725e27023cff7901a4eecde80a
+  newName: hefi1413/gitopsfc
+  newTag: af082dd1a5fb1cb7944d77661971bbd03271cf40
